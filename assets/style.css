@@ -1,0 +1,164 @@
+:root {
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-border: #e5e2dc;
+  --color-text: #1f2421;
+  --color-text-muted: #5c635e;
+  --color-primary: #1f6f4a;
+  --color-primary-dark: #165236;
+  --color-accent: #d97706;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.site-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+.calculator-page, .home-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.15rem; margin-top: 2rem; }
+.description { color: var(--color-text-muted); margin-top: 0; }
+
+.calculator-widget {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.field-label { font-size: 0.85rem; color: var(--color-text-muted); }
+
+input[type="number"], select {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--color-bg);
+}
+
+.calculate-button, .cta-button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+.calculate-button:hover, .cta-button:hover:not(:disabled) { background: var(--color-primary-dark); }
+.cta-button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.result { margin-top: 1rem; }
+.result-card {
+  background: #f0f7f3;
+  border: 1px solid #cfe6d9;
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+}
+.result-row { display: flex; justify-content: space-between; padding: 0.3rem 0; font-size: 0.95rem; }
+.result-label { color: var(--color-text-muted); }
+.result-value { font-weight: 600; }
+.result-error { color: #b91c1c; font-size: 0.9rem; }
+
+.assumptions { margin-top: 0.6rem; font-size: 0.85rem; color: var(--color-text-muted); }
+
+.monetization-slot {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.slot-label { margin: 0 0 0.5rem; }
+
+.related-calculators ul { padding-left: 1.1rem; }
+.related-calculators a { color: var(--color-primary-dark); }
+
+.appliance-links ul { padding-left: 1.1rem; columns: 2; }
+.appliance-links a { color: var(--color-primary-dark); }
+
+.region-links ul { padding-left: 1.1rem; columns: 2; }
+.region-links a { color: var(--color-primary-dark); }
+
+.baked-in-summary {
+  background: #fdf6ec;
+  border: 1px solid #f0dfb8;
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+}
+
+.category-tip {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0.75rem 0 0;
+}
+
+.faq { margin-top: 1.75rem; }
+.faq-item { margin-bottom: 1rem; }
+.faq-item h3 { font-size: 1rem; margin-bottom: 0.2rem; }
+.faq-item p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+
+.region-comparison {
+  margin-top: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.region-comparison-list { padding-left: 1.1rem; font-size: 0.92rem; }
+.region-comparison-list .current-region { font-weight: 700; color: var(--color-primary-dark); }
+.fx-disclaimer { font-size: 0.78rem; color: var(--color-text-muted); margin-top: 0.6rem; margin-bottom: 0; }
+
+.back-link { font-size: 0.85rem; margin-bottom: 0.5rem; }
+.back-link a { color: var(--color-text-muted); text-decoration: none; }
+.back-link a:hover { text-decoration: underline; }
+
+.region-select-field { background: #f4f4f2; padding: 0.6rem; border-radius: 6px; }
+
+.category-group { margin-bottom: 1.5rem; }
+.category-group h2 { text-transform: capitalize; }
+.category-group ul { padding-left: 1.1rem; }
+
+.site-footer {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  padding: 2rem 1rem;
+}

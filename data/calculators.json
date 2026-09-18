@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "battery-runtime-calculator",
+    "title": "Battery Runtime Calculator",
+    "category": "battery",
+    "formula_id": "battery_runtime",
+    "monetization_type": "affiliate",
+    "description": "Estimate how long a battery will power a given load before it needs recharging.",
+    "supports_battery_spec": true,
+    "inputs": [
+      { "id": "capacity_ah", "label": "Battery capacity", "unit": "Ah", "type": "number", "default": 100, "min": 1 },
+      { "id": "voltage", "label": "Battery voltage", "unit": "V", "type": "number", "default": 12, "min": 1 },
+      { "id": "load_watts", "label": "Load", "unit": "W", "type": "number", "default": 100, "min": 1 },
+      { "id": "depth_of_discharge", "label": "Depth of discharge", "unit": "%", "type": "number", "default": 80, "min": 1, "max": 100 }
+    ],
+    "related_calculators": ["battery-size-calculator", "inverter-size-calculator", "solar-battery-size-calculator"]
+  },
+  {
+    "slug": "battery-size-calculator",
+    "title": "Battery Size Calculator",
+    "category": "battery",
+    "formula_id": "battery_size",
+    "monetization_type": "affiliate",
+    "description": "Find the battery capacity you need to run a load for a target number of hours.",
+    "inputs": [
+      { "id": "load_watts", "label": "Load", "unit": "W", "type": "number", "default": 100, "min": 1 },
+      { "id": "hours_needed", "label": "Hours needed", "unit": "hrs", "type": "number", "default": 8, "min": 0.1 },
+      { "id": "voltage", "label": "Battery voltage", "unit": "V", "type": "number", "default": 12, "min": 1 },
+      { "id": "depth_of_discharge", "label": "Depth of discharge", "unit": "%", "type": "number", "default": 80, "min": 1, "max": 100 }
+    ],
+    "related_calculators": ["battery-runtime-calculator", "solar-battery-size-calculator"]
+  },
+  {
+    "slug": "solar-panel-output-calculator",
+    "title": "Solar Panel Output Calculator",
+    "category": "solar",
+    "formula_id": "solar_panel_output",
+    "monetization_type": "affiliate",
+    "description": "Estimate the daily and monthly energy a solar panel will produce based on local sun hours.",
+    "inputs": [
+      { "id": "panel_watts", "label": "Panel rating", "unit": "W", "type": "number", "default": 400, "min": 1 },
+      { "id": "sun_hours", "label": "Peak sun hours per day", "unit": "hrs", "type": "number", "default": 5, "min": 0.5 },
+      { "id": "system_efficiency", "label": "System efficiency", "unit": "ratio (0-1)", "type": "number", "default": 0.75, "min": 0.1, "max": 1 }
+    ],
+    "related_calculators": ["solar-system-size-calculator", "solar-battery-size-calculator"]
+  },
+  {
+    "slug": "appliance-electricity-cost-calculator",
+    "title": "Appliance Electricity Cost Calculator",
+    "category": "electricity",
+    "formula_id": "appliance_cost",
+    "monetization_type": "ads_affiliate",
+    "description": "Calculate the daily, monthly, and annual cost of running an appliance.",
+    "inputs": [
+      { "id": "watts", "label": "Appliance power", "unit": "W", "type": "number", "default": 150, "min": 1 },
+      { "id": "hours_per_day", "label": "Hours used per day", "unit": "hrs", "type": "number", "default": 4, "min": 0.1 },
+      { "id": "rate_per_kwh", "label": "Electricity rate", "unit": "per kWh", "type": "number", "default": 0.15, "min": 0.001 }
+    ],
+    "related_calculators": ["power-consumption-calculator", "solar-system-size-calculator"],
+    "supports_appliance_select": true
+  },
+  {
+    "slug": "power-consumption-calculator",
+    "title": "Power Consumption Calculator",
+    "category": "electricity",
+    "formula_id": "power_consumption",
+    "monetization_type": "ads",
+    "description": "Convert an appliance's wattage and daily usage into kWh consumption.",
+    "inputs": [
+      { "id": "watts", "label": "Power", "unit": "W", "type": "number", "default": 150, "min": 1 },
+      { "id": "hours_per_day", "label": "Hours used per day", "unit": "hrs", "type": "number", "default": 4, "min": 0.1 }
+    ],
+    "related_calculators": ["appliance-electricity-cost-calculator"],
+    "supports_appliance_select": true
+  },
+  {
+    "slug": "inverter-size-calculator",
+    "title": "Inverter Size Calculator",
+    "category": "inverter",
+    "formula_id": "inverter_size",
+    "monetization_type": "affiliate",
+    "description": "Work out the continuous and surge rating you need from an inverter for your total load.",
+    "inputs": [
+      { "id": "total_load_watts", "label": "Total connected load", "unit": "W", "type": "number", "default": 800, "min": 1 },
+      { "id": "surge_multiplier", "label": "Surge multiplier", "unit": "x", "type": "number", "default": 1.5, "min": 1 },
+      { "id": "safety_margin", "label": "Safety margin", "unit": "x", "type": "number", "default": 1.2, "min": 1 }
+    ],
+    "related_calculators": ["battery-size-calculator", "generator-size-calculator"]
+  },
+  {
+    "slug": "solar-system-size-calculator",
+    "title": "Solar System Size Calculator",
+    "category": "solar",
+    "formula_id": "solar_system_size",
+    "monetization_type": "lead",
+    "description": "Find the total panel wattage needed to cover your daily energy consumption.",
+    "inputs": [
+      { "id": "daily_consumption_wh", "label": "Daily consumption", "unit": "Wh", "type": "number", "default": 3000, "min": 1 },
+      { "id": "sun_hours", "label": "Peak sun hours per day", "unit": "hrs", "type": "number", "default": 5, "min": 0.5 },
+      { "id": "system_efficiency", "label": "System efficiency", "unit": "ratio (0-1)", "type": "number", "default": 0.75, "min": 0.1, "max": 1 }
+    ],
+    "related_calculators": ["solar-panel-output-calculator", "solar-battery-size-calculator", "solar-payback-calculator"]
+  },
+  {
+    "slug": "solar-battery-size-calculator",
+    "title": "Solar Battery Size Calculator",
+    "category": "solar",
+    "formula_id": "solar_battery_size",
+    "monetization_type": "affiliate",
+    "description": "Size a battery bank for a solar system based on daily consumption and desired days of autonomy.",
+    "inputs": [
+      { "id": "daily_consumption_wh", "label": "Daily consumption", "unit": "Wh", "type": "number", "default": 3000, "min": 1 },
+      { "id": "days_of_autonomy", "label": "Days of autonomy", "unit": "days", "type": "number", "default": 2, "min": 0.5 },
+      { "id": "voltage", "label": "Battery bank voltage", "unit": "V", "type": "number", "default": 48, "min": 1 },
+      { "id": "depth_of_discharge", "label": "Depth of discharge", "unit": "%", "type": "number", "default": 80, "min": 1, "max": 100 },
+      { "id": "battery_efficiency", "label": "Battery round-trip efficiency", "unit": "ratio (0-1)", "type": "number", "default": 0.9, "min": 0.5, "max": 1 }
+    ],
+    "related_calculators": ["solar-system-size-calculator", "battery-size-calculator"]
+  },
+  {
+    "slug": "solar-payback-calculator",
+    "title": "Solar Payback Calculator",
+    "category": "solar-economics",
+    "formula_id": "solar_payback",
+    "monetization_type": "lead",
+    "description": "Estimate how many months or years it will take for a solar system to pay for itself.",
+    "inputs": [
+      { "id": "system_cost", "label": "Total system cost", "unit": "currency", "type": "number", "default": 8000, "min": 1 },
+      { "id": "monthly_savings", "label": "Monthly electricity savings", "unit": "currency", "type": "number", "default": 120, "min": 0.01 }
+    ],
+    "related_calculators": ["solar-system-size-calculator"]
+  },
+  {
+    "slug": "generator-size-calculator",
+    "title": "Generator Size Calculator",
+    "category": "generator",
+    "formula_id": "generator_size",
+    "monetization_type": "affiliate",
+    "description": "Determine what generator output you need to cover your load, including starting surge.",
+    "inputs": [
+      { "id": "total_load_watts", "label": "Total running load", "unit": "W", "type": "number", "default": 1500, "min": 1 },
+      { "id": "starting_surge_watts", "label": "Starting surge (optional)", "unit": "W", "type": "number", "default": 2250, "min": 1 }
+    ],
+    "related_calculators": ["inverter-size-calculator"]
+  }
+]

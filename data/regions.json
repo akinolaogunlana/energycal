@@ -1,0 +1,10 @@
+[
+  { "slug": "united-states", "code": "US", "name": "United States", "currency": "USD", "currency_symbol": "$", "avg_electricity_rate_per_kwh": 0.16, "unit_system": "imperial", "usd_per_unit": 1 },
+  { "slug": "united-kingdom", "code": "GB", "name": "United Kingdom", "currency": "GBP", "currency_symbol": "£", "avg_electricity_rate_per_kwh": 0.27, "unit_system": "metric", "usd_per_unit": 1.27 },
+  { "slug": "nigeria", "code": "NG", "name": "Nigeria", "currency": "NGN", "currency_symbol": "₦", "avg_electricity_rate_per_kwh": 124.3, "unit_system": "metric", "usd_per_unit": 0.00064 },
+  { "slug": "india", "code": "IN", "name": "India", "currency": "INR", "currency_symbol": "₹", "avg_electricity_rate_per_kwh": 6.47, "unit_system": "metric", "usd_per_unit": 0.011 },
+  { "slug": "australia", "code": "AU", "name": "Australia", "currency": "AUD", "currency_symbol": "A$", "avg_electricity_rate_per_kwh": 0.30, "unit_system": "metric", "usd_per_unit": 0.65 },
+  { "slug": "canada", "code": "CA", "name": "Canada", "currency": "CAD", "currency_symbol": "C$", "avg_electricity_rate_per_kwh": 0.13, "unit_system": "metric", "usd_per_unit": 0.74 },
+  { "slug": "germany", "code": "DE", "name": "Germany", "currency": "EUR", "currency_symbol": "€", "avg_electricity_rate_per_kwh": 0.40, "unit_system": "metric", "usd_per_unit": 1.09 },
+  { "slug": "south-africa", "code": "ZA", "name": "South Africa", "currency": "ZAR", "currency_symbol": "R", "avg_electricity_rate_per_kwh": 3.00, "unit_system": "metric", "usd_per_unit": 0.056 }
+]

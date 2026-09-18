@@ -1,0 +1,11 @@
+[
+  { "slug": "12v-50ah", "voltage": 12, "capacity_ah": 50, "chemistry": "AGM/Lead-acid or LiFePO4", "common_use": "small off-grid, camping" },
+  { "slug": "12v-100ah", "voltage": 12, "capacity_ah": 100, "chemistry": "AGM/Lead-acid or LiFePO4", "common_use": "RV, camper van, small solar setups" },
+  { "slug": "12v-150ah", "voltage": 12, "capacity_ah": 150, "chemistry": "AGM/Lead-acid or LiFePO4", "common_use": "RV, boat, mid-size off-grid" },
+  { "slug": "12v-200ah", "voltage": 12, "capacity_ah": 200, "chemistry": "AGM/Lead-acid or LiFePO4", "common_use": "off-grid cabin, larger RV" },
+  { "slug": "12v-300ah", "voltage": 12, "capacity_ah": 300, "chemistry": "LiFePO4", "common_use": "off-grid home backup, large RV" },
+  { "slug": "24v-100ah", "voltage": 24, "capacity_ah": 100, "chemistry": "LiFePO4", "common_use": "mid-size solar systems" },
+  { "slug": "24v-200ah", "voltage": 24, "capacity_ah": 200, "chemistry": "LiFePO4", "common_use": "home backup, larger solar systems" },
+  { "slug": "48v-100ah", "voltage": 48, "capacity_ah": 100, "chemistry": "LiFePO4", "common_use": "whole-home solar battery banks" },
+  { "slug": "48v-200ah", "voltage": 48, "capacity_ah": 200, "chemistry": "LiFePO4", "common_use": "whole-home solar battery banks, off-grid" }
+]

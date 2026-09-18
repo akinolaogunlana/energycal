@@ -1,0 +1,10 @@
+{
+  "name": "energy-calc-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static-site programmatic SEO generator for solar/battery/energy calculators.",
+  "scripts": {
+    "build": "node generate.js"
+  },
+  "license": "MIT"
+}
